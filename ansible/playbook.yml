@@ -1,0 +1,6 @@
+- name: Deploy To-Do Microservice App
+  hosts: app
+  become: yes
+  roles:
+    - dependencies
+    - deployment

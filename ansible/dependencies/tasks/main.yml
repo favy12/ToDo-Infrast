@@ -1,0 +1,9 @@
+- name: Update apt cache and install prerequisites
+  apt:
+    update_cache: yes
+    name: "{{ item }}"
+    state: present
+  loop:
+    - docker.io
+    - docker-compose
+    - git
